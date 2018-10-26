@@ -1,0 +1,14 @@
+<%= form_with model: @category, local: true  do |f| %>
+<br>
+<%= f.label :Category_Name %><br />
+<%= f.text_field(:category_name) %>
+<br>
+<br>
+<%= f.label :Category_Description %><br />
+<%= f.text_field(:category_Description) %>
+<br>
+<div class="actions">
+	<%= f.submit "Add" %>
+</div>
+<% end %>
+<%= button_to 'Back', categories_path, :method => :get %>

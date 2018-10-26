@@ -1,0 +1,30 @@
+<h1> Category</h1>
+<table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Show</th>
+      <th scope="col">Delete</th>
+    </tr>
+    </thead>
+  <tbody>
+   <% @category.each do |category| %>
+      <tr>
+        <td><%= category.category_name %></td>
+        <td><%= link_to "Edit", edit_category_path(category.id), method: :get %> </td>
+        <td><%= link_to "Show",  category_path(category.id), method: :get %></td>
+         <% if current_user.is_admin? %>
+         <% if category.products.present? %>
+         <%else%>
+        <td><%= button_to "Delete", category_path(category.id), method: :delete %></td>  
+         <%  end %>
+         <% end %>   
+      </tr>
+   <% end %>
+  </tbody>
+</table>
+<%= link_to "Add Category", new_category_path, :method => :get %>
+<p></p>
+<%= link_to "Add product", new_product_path, :method => :get %>
+<p></p>

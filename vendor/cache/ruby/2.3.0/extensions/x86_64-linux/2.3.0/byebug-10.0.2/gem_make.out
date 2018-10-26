@@ -1,0 +1,19 @@
+current directory: /home/rails/shopping_cart_1/vendor/cache/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+/usr/bin/ruby2.3 -r ./siteconf20181025-4938-1a7m8mk.rb extconf.rb
+creating Makefile
+
+current directory: /home/rails/shopping_cart_1/vendor/cache/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/rails/shopping_cart_1/vendor/cache/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/rails/shopping_cart_1/vendor/cache/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20181025-4938-1g0uqhf/byebug

@@ -1,0 +1,21 @@
+<%= form_with(@product) do |form| %>
+  <div class="field">
+    <%= form.label :product_name %>
+    <%= form.text_field :product_name %>
+  </div>
+  <div class="field">
+    <%= form.label :product_price %>
+    <%= form.number_field :product_price %>
+  </div>
+  <div class="field">
+    <%= form.label :product_description %>
+    <%= form.text_field :product_description %>
+  </div>
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
