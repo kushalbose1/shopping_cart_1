@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
     if @category.save
        redirect_to  new_category_path
     else
-      redirect_to new_category_path, :notice => "Something went wrong!"
+      render 'new'
     end
   end        
   def update
@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
-    redirect_to categories_path, notice: "Category succesfully deleted" 
+    redirect_to categories_path, notice: "Category deleted" 
   end
   private
   def category_params

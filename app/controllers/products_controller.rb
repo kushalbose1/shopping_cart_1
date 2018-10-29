@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
     if @product.update(product_params)
       redirect_to edit_product_path(@product), notice: " updated"
     else
-       render 'edit'
+      render 'edit'
     end
   end
   def destroy

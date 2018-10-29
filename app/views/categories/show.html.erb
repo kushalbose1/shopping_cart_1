@@ -2,5 +2,9 @@
   <strong>category name:</strong>
   <%= @category.category_name %>
 </p>
-<%= button_to 'Back', categories_path, method: :get %>
+<p>
+  <strong>category description:</strong>
+  <%= @category.category_description %>
+</p>
+<%= button_to 'Back', categories_path,method: :get %>
 

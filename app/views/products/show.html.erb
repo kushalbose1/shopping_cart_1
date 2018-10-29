@@ -11,14 +11,10 @@
   <%= @product.product_description %>
 </p>
 <p>
- <strong>category_name:</strong>
- <%= @product.category.category_name %>
-</p>
-<p>
   <strong>Quantity:</strong>
   <%= @product.quantity %>
 </p>
 <% @product.image.each do |image| %> 
   <%= image_tag image %> <br /> 
 <% end %>
-<%= button_to 'Back', products_path, method: :get %>
+<%= button_to 'Back', products_path %>

@@ -5,6 +5,8 @@ ruby '2.3.1'
  #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 # twitter gem
 # gem for admin
+gem 'sqlite3'
+gem 'bootstrap', '~> 4.1.3'
  # gem for multiple image
 #gem "paperclip", "~> 6.0.0" 
 # gem 'mini_racer', platforms: :ruby
@@ -12,18 +14,12 @@ gem "twitter-bootstrap-rails"
 gem "therubyracer"
 gem "less-rails"
 # gem for role
-gem 'cancan'
 # j query gem
-gem 'jquery-ui-rails' 
-gem 'jquery-rails'
-gem 'execjs'
 #gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'autoprefixer-rails', '8.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-gem 'bootstrap', '~> 4.1.3'
 # Use Puma as the app server
 gem 'devise'
 # gem devise for login and signup pages
@@ -39,6 +35,9 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
+gem 'jquery-ui-rails' 
+gem 'jquery-rails'
+gem 'execjs'
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
@@ -57,6 +56,7 @@ gem "rails_admin"
 # gem 'capistrano-rails', group: :development
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'cancan'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
