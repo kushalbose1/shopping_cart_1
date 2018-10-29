@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# shopping_cart_1
+>>>>>>> 504131ecd93a4c2b6136e59a3d726a2a9aeef83e
