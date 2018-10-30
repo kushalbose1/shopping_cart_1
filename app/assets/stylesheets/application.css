@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+.navbar-brand {
+  padding: 0px;
+}
+.example4 .navbar-brand>img {
+  padding: 7px 14px;
+}
