@@ -1,0 +1,13 @@
+<div>
+  <% Product.all.each do |product| %>
+    <div class="col-md-3">
+      <% if product.image.attached? %>
+           <a href="<%=  product_productimgs_path(product.id)%>">    <%= image_tag product.image.first ,class: 'product-image' %>
+           </a>
+      <% end %>
+        <%= product.product_name %><br>
+        <%= product.product_price %>
+        <button type="button">Add  Cart</button>
+    </div>
+  <% end %>
+</div>

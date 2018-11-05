@@ -1,8 +1,9 @@
-<h1>New Product</h1>
+
 <%= form_with model: @product, local: true  do |f| %>
+  <%= f.collection_select(:category_id, Category.all, :id, :category_name, { :prompt => 'Select Category', :selected => @product.category_id }) %>
+  <br></br>
   <%= f.label :product_Name %>
   <%= f.text_field(:product_name) %>
-  <br></br>
   <br></br>
   <%= f.label :product_price %>
   <%= f.text_field(:product_price) %>
@@ -13,10 +14,11 @@
   <%= f.label :quantity %>
   <%= f.text_field(:quantity) %>
   <br></br>
-  <%= f.file_field :images,multiple: true %>
+  <%= f.file_field :images, multiple: true %>
   <p></p>
   <div class="actions">
     <%= f.submit "Add" %>
   </div>
 <% end %>
- <%= button_to 'Back', products_path %>
+ <%= button_to 'Back', products_path, :method => :get %>
+

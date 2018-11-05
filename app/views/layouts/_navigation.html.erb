@@ -1,0 +1,17 @@
+ <div class="col-lg-3">
+ <div class="well sidebar-nav">
+    <h3>category</h3>       
+    <ul class="nav nav-list">
+       <%Category.all.each do |category| %>
+          <tr>
+            <li class="nav-header">
+        
+              <a href="<%= shopping_path(category.id)%>"> <td><%= category.category_name %></td></a>
+          
+            </li>
+          </tr>
+          
+       <% end %>
+    </ul>
+  </div> 
+  </div> 

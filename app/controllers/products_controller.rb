@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   def index
     if current_user.is_admin?
@@ -8,15 +9,15 @@ class ProductsController < ApplicationController
     end
   end
   def show
-    @product = Product.find(params[:id])
+    @product = Product.find_by_id(params[:id])
   end
   def new
-     product = Product.new
-     product = Product.new
+    @product = Product.new
   end
   def edit
     @product.user = current_user
     @product = Product.find(params[:id])
+    
   end
   def create
     @product = current_user.products.new(product_params)
@@ -44,7 +45,9 @@ class ProductsController < ApplicationController
   end
   private
   def set_product
-    @product = Product.find(params[:id])
+
+    @product = Product.find_by_id(params[:id])
+    
   end
   def product_params
     params.require(:product).permit(:product_name, :category_id, :product_price, :product_description, :quantity)

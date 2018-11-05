@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  
   def index
     @category = Category.all
   end
@@ -6,7 +7,7 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
   def create
-    @category = Category.new(category_params)
+    @category =Category.new(category_params)
     if @category.save
        redirect_to  new_category_path
     else
@@ -25,7 +26,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
   end
   def show
-    @category = Category.find(params[:id])
+    @category = Category.find_by_id(params[:id])
   end
   def destroy
     @category = Category.find(params[:id])

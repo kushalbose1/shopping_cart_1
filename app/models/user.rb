@@ -4,7 +4,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable     
   validates :first_name, :last_name, :email, :phonenum, :houseno, :shippingaddress,
             :houseno, :city, :state, :pincode, presence: true
-  has_many  :products       
+  has_many  :products
+         
 
   def is_admin?
     self.user_type == "admin"

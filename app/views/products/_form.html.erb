@@ -1,4 +1,6 @@
-<%= form_with(@product) do |form| %>
+<%= form_with(model: :product, local: true) do |form| %>
+<%= select_tag(:category_id, options_for_select(@categories), :prompt => “Select one!”) %>
+  
   <div class="field">
     <%= form.label :product_name %>
     <%= form.text_field :product_name %>

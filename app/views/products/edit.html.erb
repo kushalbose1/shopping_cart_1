@@ -1,25 +1,46 @@
-<h1>Edit the Product</h1>
-<%= form_with(@product, url:product_path(@product), method: :put) do |f| %>
+<h1>Editing Product</h1>
+<%= form_with(model: @product, url: product_path(@product), method: :put, local: true) do |f| %>
+ 
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "error") %> prohibited
+        this user from being saved:
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
  <p>
     <%= f.label :product_name %><br>
     <%= f.text_field :product_name %>
   </p>
+
   <p>
     <%= f.label :product_price %><br>
     <%= f.text_field :product_price %>
   </p>
+
   <p>
     <%= f.label :product_description %><br>
     <%= f.text_field :product_description %>
   </p>
-  <p>
+
+<p>
     <%= f.label :quantity %><br>
     <%= f.text_field :quantity %>
   </p>
+
   <p>
     <div class="actions">
-    <%= f.submit "edit" %>
+    <%= f.submit "Update" %>
   </p>
 </div>
+ 
 <% end %>
-<%= button_to 'Back', products_path %>
+ 
+<%= button_to 'Back', products_path, method: :get %>

@@ -15,7 +15,7 @@ class SessionController < ApplicationController
 
     skip_before_filter :verify_authenticity_token    
     session[:user_id] = nil     
-    redirect_to '/' 
+    redirect_to '/login' 
   end  
 
 end

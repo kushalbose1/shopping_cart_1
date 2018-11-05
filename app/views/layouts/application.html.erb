@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
     <%= stylesheet_link_tag "application", :media => "all" %>
@@ -13,10 +14,11 @@
     <%= javascript_include_tag "application" %>
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript"></script>
-    <![endif]-->
-  </head>
-  <body>
+-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript"></script>
+-    <![endif]-->
+   
+   </head>
+   <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
      <!-- Brand/logo -->
       <a class="navbar-brand" href="#">
@@ -35,7 +37,6 @@
       </div>
        
          <% if user_signed_in? %>
-            
             <div class="navbar-collapse collapse navbar-responsive-collapse">
               <ul class="nav navbar-nav navbar-right">
                
@@ -51,11 +52,7 @@
               <% end %>
          <% if user_signed_in? %>
            <ul class="nav navbar-nav navbar-right">
-             
-             
-              <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><a class="navbar-brand" href="http://disputebills.com"><img style=" width: 64px;" src="https://res.cloudinary.com/disputebills/image/upload/v1462474206/blue-mark_cnzgry.png" alt="Dispute Bills">
-        </a> <span class="caret"></span></a>
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><% image_tag("login.jpg", class: "menu_icon")%> <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
                <%= button_to "Edit profile", edit_user_registration_path, method: :get, class: 'dropdown-item'  %>
                <div class="dropdown-divider"></div>
@@ -82,7 +79,7 @@
                       <ul class="nav nav-list">
                         <li class="nav-header" href="#"></li>
                          <li> <%= button_to "category",categories_path, method: :get %></li>
-                         <li> <%= button_to "Products", products_path, :method => :get %></li>   
+                         <li> <%= button_to "Products", products_path, :method => :get %></li><li> <%= button_to "Logout",  destroy_user_session_path, :method => :delete %></li>
                       </ul>
                   </div><!--/span-->
                      <div class="col-lg-6">
@@ -93,5 +90,3 @@
                   <div class="col-lg-3"> 
                 </div><!--/row-->
               </div> <!-- /container -->
-  </body>
-  </html>

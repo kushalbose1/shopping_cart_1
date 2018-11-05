@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_25_133034) do
+ActiveRecord::Schema.define(version: 2018_10_30_101142) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,12 +33,8 @@ ActiveRecord::Schema.define(version: 2018_10_25_133034) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "category_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "category_description"
-  end
+# Could not dump table "categories" because of following StandardError
+#   Unknown type 'categories' for column 'references'
 
   create_table "products", force: :cascade do |t|
     t.string "product_name"
