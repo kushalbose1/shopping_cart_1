@@ -7,7 +7,7 @@
       <% end %>
         <%= product.product_name %><br>
         <%= product.product_price %>
-        <button type="button">Add  Cart</button>
+        <li> <%= button_to 'Add to Cart', product_orders_path(product_id: product) %> </li>
     </div>
   <% end %>
 </div>

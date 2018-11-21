@@ -17,8 +17,8 @@ class ProductsController < ApplicationController
   def edit
     @product.user = current_user
     @product = Product.find(params[:id])
-    
   end
+  
   def create
     @product = current_user.products.new(product_params)
     @product.image.attach(params[:product][:images])

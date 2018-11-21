@@ -14,22 +14,18 @@
       </ul>
     </div>
   <% end %>
- 
  <p>
     <%= f.label :product_name %><br>
     <%= f.text_field :product_name %>
   </p>
-
   <p>
     <%= f.label :product_price %><br>
     <%= f.text_field :product_price %>
   </p>
-
   <p>
     <%= f.label :product_description %><br>
     <%= f.text_field :product_description %>
   </p>
-
 <p>
     <%= f.label :quantity %><br>
     <%= f.text_field :quantity %>
@@ -40,7 +36,5 @@
     <%= f.submit "Update" %>
   </p>
 </div>
- 
 <% end %>
- 
 <%= button_to 'Back', products_path, method: :get %>

@@ -13,10 +13,14 @@
  *= require_tree .
  *= require_self
  */
- .example6 .navbar-brand{ 
-  background: url(https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center / contain no-repeat;
-  width: 200px;
+ @import "bootstrap-sprockets"
+ .navbar-brand {
+  padding: 0px;
 }
+.example4 .navbar-brand>img {
+  padding: 7px 14px;
+}
+ 
 #playground-container {
     height: 500px;
     overflow: hidden !important;

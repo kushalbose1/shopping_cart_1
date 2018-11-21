@@ -10,5 +10,3 @@ class ShoppingController < ApplicationController
     @products = Product.where(category_id: params[:id])
   end
 end
-  
-
