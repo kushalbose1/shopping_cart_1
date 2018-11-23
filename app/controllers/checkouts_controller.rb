@@ -19,8 +19,8 @@ class CheckoutsController < ApplicationController
 
   # GET /checkouts/1/edit
   def edit
-  end
-
+  end 
+  
   # POST /checkouts
   # POST /checkouts.json
   def create
@@ -36,7 +36,7 @@ class CheckoutsController < ApplicationController
       end
     end
   end
-
+  
   # PATCH/PUT /checkouts/1
   # PATCH/PUT /checkouts/1.json
   def update
@@ -60,7 +60,7 @@ class CheckoutsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_checkout
@@ -71,4 +71,5 @@ class CheckoutsController < ApplicationController
     def checkout_params
       params.fetch(:checkout, {})
     end
+
 end

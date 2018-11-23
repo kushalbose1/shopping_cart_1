@@ -1,18 +1,12 @@
 class Cart < ApplicationRecord
-	 has_many :line_items , dependent: :destroy
-     has_many :products, through: :line_items
-     belongs_to :product,optional: true
-  # LOGIC
-    
+	 has_many :items, dependent: :destroy
+     has_many :products, through: :items
+     belongs_to :user
 
-    def add_product(product_id)
-    current_item= line_items.find_by(product_id: product_id)
-    if current_item
-        current_item.quantity +=1
-    else
-        current_item= line_items.build(product_id: product_id)  
-    end 
-    current_item
-end
+  def add_item(product_id)
+    @item = Item.find(product_id: product_id)
+    item.quantity += 1
+    item.save
+  end
 end
 

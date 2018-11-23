@@ -1,2 +1,11 @@
-<h1>Oders#index</h1>
-<p>Find me in app/views/oders/index.html.erb</p>
+
+<% @oders.each do |oder| %>
+  <p>Name: <%= oder.name %></p>
+  <p>Email: <%= oder.email %></p>
+  <p>Items: </p>
+  <ul>
+    <% oder.items.each do |item| %>
+    <li><%= item.quantity %> x <%= item.product.name %></li>
+    <% end %>
+  </ul>
+<% end %>

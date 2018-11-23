@@ -7,7 +7,7 @@
       <% end %>
         <%= product.product_name %><br>
         <%= product.product_price %>
-        <li> <%= button_to 'Add to Cart',  add_to_cart_cart_path(product),method: :get%> </li>
+        <li>  <%= button_to "Add to Cart", items_path(:product_id => product), :method => :post  %> </li>
     </div>
   <% end %>
 </div>

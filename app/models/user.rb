@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates :first_name, :last_name, :email, :phonenum, :houseno, :shippingaddress,
             :houseno, :city, :state, :pincode, presence: true
   has_many  :products
+  has_one :cart
          
 
   def is_admin?

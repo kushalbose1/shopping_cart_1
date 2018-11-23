@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Users::SessionsController < Devise::SessionsController
+class User::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
  # def create
  #    user = User.where(email: params[:user][:email],  password: params[:user][:password]).first
